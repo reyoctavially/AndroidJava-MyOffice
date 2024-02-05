@@ -1,0 +1,24 @@
+<resources>
+    <!--
+    TODO: Before you run your application, you need a Google Maps API key.
+
+    To get one, follow this link, follow the directions and press "Create" at the end:
+
+    https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend&keyType=CLIENT_SIDE_ANDROID&r=96:EE:C1:AA:19:06:AB:7C:41:3F:80:AC:35:04:A9:33:F3:A8:10:DF%3Borg.reyoctavially.myoffice.fragment
+
+    You can also add your credentials to an existing key, using these values:
+
+    Package name:
+    org.reyoctavially.myoffice.fragment
+
+    SHA-1 certificate fingerprint:
+    96:EE:C1:AA:19:06:AB:7C:41:3F:80:AC:35:04:A9:33:F3:A8:10:DF
+
+    Alternatively, follow the directions here:
+    https://developers.google.com/maps/documentation/android/start#get-key
+
+    Once you have your key (it starts with "AIza"), replace the "google_maps_key"
+    string in this file.
+    -->
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyBsHBKIXmNDcifAnci1N4pJvJ2WynEbIXA</string>
+</resources>

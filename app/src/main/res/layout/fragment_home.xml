@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light"
+    tools:context=".fragment.HomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_top"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@color/primary_200"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_selamat_datang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/selamat_datang"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_nama_pegawai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:text="@string/nama_pegawai"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/tv_kode_pegawai"
+            app:layout_constraintStart_toEndOf="@+id/iv_next" />
+
+        <TextView
+            android:id="@+id/tv_jabatan_pegawai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:text="@string/jabatan_pegawai"
+            android:textColor="@color/white"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_next"
+            app:layout_constraintStart_toEndOf="@+id/iv_next" />
+
+        <TextView
+            android:id="@+id/tv_kode_pegawai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:text="@string/kode_pegawai"
+            android:textColor="@color/light"
+            app:layout_constraintBottom_toTopOf="@+id/tv_jabatan_pegawai"
+            app:layout_constraintStart_toEndOf="@+id/iv_next" />
+
+        <ImageView
+            android:id="@+id/iv_next"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/office"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_selamat_datang" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_bottom"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/light"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cl_top">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_location"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:gravity="center_horizontal"
+                    android:text="Sedang mengambil lokasi ..."
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/view_kesehatan" />
+
+                <View
+                    android:id="@+id/view_small_primary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:background="@color/primary_200"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/view_content_top"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@drawable/bg_radius_white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/iv_absen_in_small"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="16dp"
+                    android:src="@drawable/ic_arrow_down_success_24dp"
+                    app:layout_constraintStart_toStartOf="@+id/view_content_top"
+                    app:layout_constraintTop_toTopOf="@+id/view_content_top" />
+
+                <ImageView
+                    android:id="@+id/iv_absen_history_small"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="50dp"
+                    android:layout_marginRight="50dp"
+                    android:src="@drawable/ic_history_info_24dp"
+                    app:layout_constraintEnd_toEndOf="@+id/view_content_top"
+                    app:layout_constraintTop_toTopOf="@+id/view_content_top" />
+
+                <ImageView
+                    android:id="@+id/iv_absen_out_small"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="16dp"
+                    android:src="@drawable/ic_arrow_up_danger_24dp"
+                    app:layout_constraintEnd_toStartOf="@+id/iv_absen_history_small"
+                    app:layout_constraintStart_toEndOf="@+id/iv_absen_in_small"
+                    app:layout_constraintTop_toTopOf="@+id/view_content_top" />
+
+                <TextView
+                    android:id="@+id/tv_absen_in_small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/absen_in"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="@+id/iv_absen_in_small"
+                    app:layout_constraintStart_toStartOf="@+id/iv_absen_in_small"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_absen_in_small" />
+
+                <TextView
+                    android:id="@+id/tv_absen_out_small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/absen_out"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="@+id/iv_absen_out_small"
+                    app:layout_constraintStart_toStartOf="@+id/iv_absen_out_small"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_absen_out_small" />
+
+                <TextView
+                    android:id="@+id/tv_absen_history_small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/absen_history"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="@+id/iv_absen_history_small"
+                    app:layout_constraintStart_toStartOf="@+id/iv_absen_history_small"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_absen_history_small" />
+
+                <View
+                    android:id="@+id/view_cuti"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginRight="32dp"
+                    android:background="@drawable/bg_radius_white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view_content_top" />
+
+                <View
+                    android:id="@+id/view_pengajuan_cuti"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginRight="32dp"
+                    android:background="@drawable/bg_radius_white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view_cuti" />
+
+                <ImageView
+                    android:id="@+id/iv_cuti"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:src="@drawable/ic_travel_info_24dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/view_cuti"
+                    app:layout_constraintStart_toStartOf="@+id/view_cuti"
+                    app:layout_constraintTop_toTopOf="@+id/view_cuti" />
+
+                <TextView
+                    android:id="@+id/tv_cuti"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:text="@string/data_cuti"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="@+id/view_cuti"
+                    app:layout_constraintStart_toEndOf="@+id/iv_cuti"
+                    app:layout_constraintTop_toTopOf="@+id/iv_cuti" />
+
+                <ImageView
+                    android:id="@+id/iv_pengajuan_cuti"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:src="@drawable/ic_create_success_24dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/view_pengajuan_cuti"
+                    app:layout_constraintStart_toStartOf="@+id/view_pengajuan_cuti"
+                    app:layout_constraintTop_toTopOf="@+id/view_pengajuan_cuti" />
+
+                <TextView
+                    android:id="@+id/tv_pengajuan_cuti"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:text="@string/pengajuan_cuti"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="@+id/view_pengajuan_cuti"
+                    app:layout_constraintStart_toEndOf="@+id/iv_pengajuan_cuti"
+                    app:layout_constraintTop_toTopOf="@+id/iv_pengajuan_cuti" />
+
+                <View
+                    android:id="@+id/view_kesehatan"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginRight="32dp"
+                    android:background="@drawable/bg_radius_white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view_pengajuan_cuti" />
+
+                <ImageView
+                    android:id="@+id/iv_kesehatan"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:src="@drawable/ic_favorite_danger_24dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/view_kesehatan"
+                    app:layout_constraintStart_toStartOf="@+id/view_kesehatan"
+                    app:layout_constraintTop_toTopOf="@+id/view_kesehatan" />
+
+                <TextView
+                    android:id="@+id/tv_kesehatan"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:text="@string/kesehatan"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="@+id/view_kesehatan"
+                    app:layout_constraintStart_toEndOf="@+id/iv_kesehatan"
+                    app:layout_constraintTop_toTopOf="@+id/iv_kesehatan" />
+
+                <TextView
+                    android:id="@+id/tv_kesehatan_desc"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:text="@string/riwayat_kesehatan"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_pengajuan_cuti_desc"
+                    app:layout_constraintStart_toEndOf="@+id/iv_kesehatan"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_kesehatan" />
+
+                <TextView
+                    android:id="@+id/tv_cuti_desc"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginEnd="50dp"
+                    android:layout_marginRight="50dp"
+                    android:text="@string/list_data_cuti"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="@+id/view_cuti"
+                    app:layout_constraintStart_toEndOf="@+id/iv_cuti"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_cuti" />
+
+                <TextView
+                    android:id="@+id/tv_pengajuan_cuti_desc"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginEnd="50dp"
+                    android:layout_marginRight="50dp"
+                    android:text="@string/riwayat_pengajuan_cuti"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="@+id/view_pengajuan_cuti"
+                    app:layout_constraintStart_toEndOf="@+id/iv_pengajuan_cuti"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_pengajuan_cuti" />
+
+                <ProgressBar
+                    android:id="@+id/progressBar_home"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
